@@ -33,6 +33,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.tittle = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,11 +89,21 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // tittle
+            // 
+            this.tittle.Location = new System.Drawing.Point(298, 13);
+            this.tittle.Name = "tittle";
+            this.tittle.Size = new System.Drawing.Size(235, 23);
+            this.tittle.TabIndex = 11;
+            this.tittle.Text = "ECUACION NO LINEAL DE BISECCION";
+            this.tittle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(841, 542);
+            this.Controls.Add(this.tittle);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -102,6 +113,7 @@
             this.Text = "Form3";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -112,5 +124,6 @@
         private Button button2;
         private Button button3;
         private Button button4;
+        private TextBox tittle;
     }
 }

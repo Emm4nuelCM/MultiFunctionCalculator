@@ -42,26 +42,51 @@ namespace CALCULADORA_2._0
         #endregion
 
 
-        #region SUBMENU1
+        #region ECUACIONES NO LINEALES
         private void master1_Click(object sender, EventArgs e)
         {
             showSubmenu(panelSubmenu1);
         }
 
+        //BAIRSTOW
         private void button2_Click(object sender, EventArgs e)
         {
             openChildForm(new Form2());
             hideSubmenu();
         }
 
+        //BISECCION
         private void button3_Click(object sender, EventArgs e)
         {
             openChildForm(new Form3());
             hideSubmenu();
         }
 
+        //FALSA POSICION
         private void button4_Click(object sender, EventArgs e)
         {
+
+            hideSubmenu();
+        }
+
+        //NEWTON
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            hideSubmenu();
+        }
+
+        //SECANTE
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            hideSubmenu();
+        }
+
+        //SUSTITUCION SUCESIVA
+        private void button9_Click(object sender, EventArgs e)
+        {
+
             hideSubmenu();
         }
         #endregion
@@ -130,5 +155,7 @@ namespace CALCULADORA_2._0
             childForm.Show();
         }
         #endregion
+
+        
     }
 }
