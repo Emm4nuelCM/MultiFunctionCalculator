@@ -65,51 +65,50 @@ namespace CALCULADORA_2._0
         //FALSA POSICION
         private void button4_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new Form4());
             hideSubmenu();
         }
 
         //NEWTON
         private void button1_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new Form5());
             hideSubmenu();
         }
 
         //SECANTE
         private void button5_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new Form6());
             hideSubmenu();
         }
 
         //SUSTITUCION SUCESIVA
         private void button9_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new Form7());
             hideSubmenu();
         }
         #endregion
 
 
-        #region SUBMENU2
+        #region INTERPOLACION
         private void master2_Click(object sender, EventArgs e)
         {
             showSubmenu(panelSubmenu2);
         }
 
+        //LINEAL
         private void button8_Click(object sender, EventArgs e)
         {
+            openChildForm(new Form8());
             hideSubmenu();
         }
 
+        //CUADRATICA
         private void button7_Click(object sender, EventArgs e)
         {
-            hideSubmenu();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
+            openChildForm(new Form9());
             hideSubmenu();
         }
         #endregion
