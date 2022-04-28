@@ -140,18 +140,18 @@ namespace CALCULADORA_2._0
 
         #region OPENFORMS
         private Form activeForm = null;
-        private void openChildForm(Form childForm)
+        private void openChildForm(Form optionMaster)
         {
             if (activeForm != null)
                 activeForm.Close();
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panelChildForm.Controls.Add(childForm);
-            panelChildForm.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
+            activeForm = optionMaster;
+            optionMaster.TopLevel = false;
+            optionMaster.FormBorderStyle = FormBorderStyle.None;
+            optionMaster.Dock = DockStyle.Fill;
+            panelOptionMaster.Controls.Add(optionMaster);
+            panelOptionMaster.Tag = optionMaster;
+            optionMaster.BringToFront();
+            optionMaster.Show();
         }
         #endregion
 
