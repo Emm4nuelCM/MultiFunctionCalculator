@@ -72,7 +72,7 @@
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(133, 561);
+            this.panelSideMenu.Size = new System.Drawing.Size(133, 581);
             this.panelSideMenu.TabIndex = 0;
             // 
             // panelSubmenu3
@@ -365,7 +365,7 @@
             this.panelOptionMaster.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelOptionMaster.Location = new System.Drawing.Point(133, 0);
             this.panelOptionMaster.Name = "panelOptionMaster";
-            this.panelOptionMaster.Size = new System.Drawing.Size(751, 561);
+            this.panelOptionMaster.Size = new System.Drawing.Size(717, 581);
             this.panelOptionMaster.TabIndex = 1;
             // 
             // Form1
@@ -373,7 +373,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(884, 561);
+            this.ClientSize = new System.Drawing.Size(850, 581);
             this.Controls.Add(this.panelOptionMaster);
             this.Controls.Add(this.panelSideMenu);
             this.Name = "Form1";
