@@ -13,11 +13,13 @@ namespace CALCULADORA_2._0
     public partial class Form3 : Form
     {
         #region VALORES
-        private double valor0;
+        private string valor0;
         private double valor1;
         private double valor2;
         private double valor3;
         private double valor4;
+        private double potencia;
+        private string letra;
         //private string fraseInCuad = "Resultado de Interpolacion Cuadratica = ";
         //private string fraseFin = " Aprox.";
         private double operacion;
@@ -39,7 +41,7 @@ namespace CALCULADORA_2._0
             }
             else
             {
-                valor0 = Convert.ToDouble(FXBox.Text);
+                valor0 = Convert.ToString(FXBox.Text);
                 if (String.IsNullOrEmpty(paroBox.Text))
                 {
                     validateUserEntry();
@@ -61,7 +63,12 @@ namespace CALCULADORA_2._0
                         else
                         {
                             valor3 = Convert.ToDouble(hastaBox.Text);
-                            operacion = 2 + 2;
+                            for(int i = 0; i < valor0.Length; i++)
+                            {
+                                
+                            }
+                        
+
                             if (String.IsNullOrEmpty(errorBox.Text))
                             {
                                 validateUserEntry();
@@ -125,7 +132,6 @@ namespace CALCULADORA_2._0
                 e.Handled = true;
             }
         }
-
         #endregion
 
         #region SOLONUMEROS
@@ -137,10 +143,6 @@ namespace CALCULADORA_2._0
                 e.Handled = true;
             }
         }
-
-
         #endregion
-
-
     }
 }
