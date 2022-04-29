@@ -162,7 +162,5 @@ namespace CALCULADORA_2._0
 
 
         #endregion
-
-        
     }
 }

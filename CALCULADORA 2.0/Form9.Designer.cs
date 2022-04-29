@@ -40,28 +40,28 @@
             this.button3 = new System.Windows.Forms.Button();
             this.valoresBox = new System.Windows.Forms.GroupBox();
             this.FX2Box = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.X2Box = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.errorBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.FX1Box = new System.Windows.Forms.TextBox();
             this.FX0Box = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.XBox = new System.Windows.Forms.TextBox();
-            this.X1Box = new System.Windows.Forms.TextBox();
             this.X0Box = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.X1Box = new System.Windows.Forms.TextBox();
+            this.XBox = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.X2Box = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.valoresBox.SuspendLayout();
@@ -249,17 +249,6 @@
             this.FX2Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.FX2Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box_KeyPress);
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(258, 154);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(19, 21);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "2";
-            // 
             // label12
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -270,43 +259,6 @@
             this.label12.Size = new System.Drawing.Size(85, 30);
             this.label12.TabIndex = 24;
             this.label12.Text = "f(X   )=";
-            // 
-            // X2Box
-            // 
-            this.X2Box.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.X2Box.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.X2Box.Location = new System.Drawing.Point(77, 143);
-            this.X2Box.Multiline = true;
-            this.X2Box.Name = "X2Box";
-            this.X2Box.ShortcutsEnabled = false;
-            this.X2Box.Size = new System.Drawing.Size(130, 30);
-            this.X2Box.TabIndex = 23;
-            this.X2Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.X2Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box_KeyPress);
-            // 
-            // label13
-            // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(28, 151);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(19, 21);
-            this.label13.TabIndex = 22;
-            this.label13.Text = "2";
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(10, 142);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(61, 30);
-            this.label14.TabIndex = 21;
-            this.label14.Text = "X   =";
             // 
             // errorBox
             // 
@@ -331,18 +283,6 @@
             this.label6.Size = new System.Drawing.Size(50, 30);
             this.label6.TabIndex = 18;
             this.label6.Text = "Er=";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(28, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 21);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "0";
             // 
             // label1
             // 
@@ -382,17 +322,6 @@
             this.FX0Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.FX0Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box_KeyPress);
             // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(258, 107);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(19, 21);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "1";
-            // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -426,18 +355,64 @@
             this.label9.TabIndex = 11;
             this.label9.Text = "f(X   )=";
             // 
-            // XBox
+            // X0Box
             // 
-            this.XBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.XBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.XBox.Location = new System.Drawing.Point(77, 187);
-            this.XBox.Multiline = true;
-            this.XBox.Name = "XBox";
-            this.XBox.ShortcutsEnabled = false;
-            this.XBox.Size = new System.Drawing.Size(130, 30);
-            this.XBox.TabIndex = 10;
-            this.XBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.XBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box_KeyPress);
+            this.X0Box.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.X0Box.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.X0Box.Location = new System.Drawing.Point(77, 48);
+            this.X0Box.Name = "X0Box";
+            this.X0Box.ShortcutsEnabled = false;
+            this.X0Box.Size = new System.Drawing.Size(130, 29);
+            this.X0Box.TabIndex = 7;
+            this.X0Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.X0Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box_KeyPress);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(57, 255);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(600, 69);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 35;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(10, 95);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 30);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "X   =";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(28, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(19, 21);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "1";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(10, 185);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 30);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "X =";
             // 
             // X1Box
             // 
@@ -452,69 +427,95 @@
             this.X1Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.X1Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box_KeyPress);
             // 
-            // X0Box
+            // XBox
             // 
-            this.X0Box.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.X0Box.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.X0Box.Location = new System.Drawing.Point(77, 48);
-            this.X0Box.Name = "X0Box";
-            this.X0Box.ShortcutsEnabled = false;
-            this.X0Box.Size = new System.Drawing.Size(130, 29);
-            this.X0Box.TabIndex = 7;
-            this.X0Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.X0Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box_KeyPress);
+            this.XBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.XBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.XBox.Location = new System.Drawing.Point(77, 187);
+            this.XBox.Multiline = true;
+            this.XBox.Name = "XBox";
+            this.XBox.ShortcutsEnabled = false;
+            this.XBox.Size = new System.Drawing.Size(130, 30);
+            this.XBox.TabIndex = 10;
+            this.XBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.XBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box_KeyPress);
             // 
-            // label8
+            // label14
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(10, 185);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 30);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "X =";
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(10, 142);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 30);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "X   =";
             // 
-            // label3
+            // label13
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(28, 104);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(19, 21);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "1";
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(28, 151);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(19, 21);
+            this.label13.TabIndex = 22;
+            this.label13.Text = "2";
             // 
-            // label4
+            // X2Box
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(10, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 30);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "X   =";
+            this.X2Box.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.X2Box.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.X2Box.Location = new System.Drawing.Point(77, 143);
+            this.X2Box.Multiline = true;
+            this.X2Box.Name = "X2Box";
+            this.X2Box.ShortcutsEnabled = false;
+            this.X2Box.Size = new System.Drawing.Size(130, 30);
+            this.X2Box.TabIndex = 23;
+            this.X2Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.X2Box.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box_KeyPress);
             // 
-            // pictureBox1
+            // label2
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(57, 255);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(600, 69);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 35;
-            this.pictureBox1.TabStop = false;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(28, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 21);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "0";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(258, 154);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(19, 21);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "2";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(258, 107);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(19, 21);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "1";
             // 
             // Form9
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(708, 604);
             this.Controls.Add(this.pictureBox1);
@@ -550,26 +551,26 @@
         private GroupBox valoresBox;
         private TextBox errorBox;
         private Label label6;
-        private Label label2;
         private Label label1;
         private TextBox FX1Box;
         private TextBox FX0Box;
-        private Label label10;
         private Label label11;
         private Label label7;
         private Label label9;
-        private TextBox XBox;
-        private TextBox X1Box;
         private TextBox X0Box;
-        private Label label8;
-        private Label label3;
-        private Label label4;
         private TextBox FX2Box;
-        private Label label5;
         private Label label12;
+        private PictureBox pictureBox1;
+        private Label label5;
         private TextBox X2Box;
         private Label label13;
         private Label label14;
-        private PictureBox pictureBox1;
+        private Label label2;
+        private Label label10;
+        private TextBox XBox;
+        private TextBox X1Box;
+        private Label label8;
+        private Label label3;
+        private Label label4;
     }
 }

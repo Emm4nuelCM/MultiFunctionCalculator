@@ -50,6 +50,7 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelOptionMaster = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelSubmenu3.SuspendLayout();
             this.panelSubmenu2.SuspendLayout();
@@ -82,7 +83,7 @@
             this.panelSubmenu3.Controls.Add(this.button11);
             this.panelSubmenu3.Controls.Add(this.button12);
             this.panelSubmenu3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubmenu3.Location = new System.Drawing.Point(0, 594);
+            this.panelSubmenu3.Location = new System.Drawing.Point(0, 627);
             this.panelSubmenu3.Name = "panelSubmenu3";
             this.panelSubmenu3.Size = new System.Drawing.Size(116, 125);
             this.panelSubmenu3.TabIndex = 6;
@@ -141,7 +142,7 @@
             this.master3.FlatAppearance.BorderSize = 0;
             this.master3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.master3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.master3.Location = new System.Drawing.Point(0, 549);
+            this.master3.Location = new System.Drawing.Point(0, 582);
             this.master3.Name = "master3";
             this.master3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.master3.Size = new System.Drawing.Size(116, 45);
@@ -154,12 +155,13 @@
             // panelSubmenu2
             // 
             this.panelSubmenu2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelSubmenu2.Controls.Add(this.button2);
             this.panelSubmenu2.Controls.Add(this.button7);
             this.panelSubmenu2.Controls.Add(this.button8);
             this.panelSubmenu2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubmenu2.Location = new System.Drawing.Point(0, 459);
             this.panelSubmenu2.Name = "panelSubmenu2";
-            this.panelSubmenu2.Size = new System.Drawing.Size(116, 90);
+            this.panelSubmenu2.Size = new System.Drawing.Size(116, 123);
             this.panelSubmenu2.TabIndex = 4;
             // 
             // button7
@@ -368,6 +370,21 @@
             this.panelOptionMaster.Size = new System.Drawing.Size(717, 581);
             this.panelOptionMaster.TabIndex = 1;
             // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.LightGray;
+            this.button2.Location = new System.Drawing.Point(0, 80);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(116, 37);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Newton";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -411,5 +428,6 @@
         private Button button9;
         private Button button5;
         private Button button1;
+        private Button button2;
     }
 }
