@@ -94,6 +94,7 @@
             XBox.Text = "";
             tbDisplay.Text = "";
             tbDisplayError.Text = "";
+            errorBox.Text = "";
         }
         #endregion
 

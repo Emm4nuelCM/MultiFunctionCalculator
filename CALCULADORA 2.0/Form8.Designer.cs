@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form8));
-            this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.valoresBox = new System.Windows.Forms.GroupBox();
             this.errorBox = new System.Windows.Forms.TextBox();
@@ -51,12 +50,13 @@
             this.limpiar = new System.Windows.Forms.Button();
             this.calcular = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.tbDisplay = new System.Windows.Forms.TextBox();
-            this.tittle = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tbDisplayError = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tittle = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.valoresBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -64,30 +64,17 @@
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button4
-            // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Location = new System.Drawing.Point(24, 95);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(72, 40);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "<---SALIR";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(708, 560);
+            this.dataGridView1.Size = new System.Drawing.Size(708, 566);
             this.dataGridView1.TabIndex = 11;
             // 
             // valoresBox
@@ -130,6 +117,7 @@
             this.errorBox.Size = new System.Drawing.Size(130, 30);
             this.errorBox.TabIndex = 20;
             this.errorBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.errorBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box_KeyPress);
             // 
             // label6
             // 
@@ -355,6 +343,20 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             // 
+            // button4
+            // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button4.Location = new System.Drawing.Point(24, 95);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(72, 40);
+            this.button4.TabIndex = 15;
+            this.button4.Text = "<---SALIR";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // tbDisplay
             // 
             this.tbDisplay.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -368,22 +370,6 @@
             this.tbDisplay.Size = new System.Drawing.Size(654, 52);
             this.tbDisplay.TabIndex = 17;
             this.tbDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // tittle
-            // 
-            this.tittle.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tittle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.tittle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tittle.ForeColor = System.Drawing.SystemColors.Menu;
-            this.tittle.Location = new System.Drawing.Point(163, 36);
-            this.tittle.MaximumSize = new System.Drawing.Size(400, 40);
-            this.tittle.Name = "tittle";
-            this.tittle.ReadOnly = true;
-            this.tittle.ShortcutsEnabled = false;
-            this.tittle.Size = new System.Drawing.Size(356, 36);
-            this.tittle.TabIndex = 23;
-            this.tittle.Text = "ECUACION INTERPOLACION LINEAL";
-            this.tittle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBox1
             // 
@@ -441,18 +427,34 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "RESULTADOS";
             // 
+            // tittle
+            // 
+            this.tittle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.tittle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.tittle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tittle.ForeColor = System.Drawing.SystemColors.Menu;
+            this.tittle.Location = new System.Drawing.Point(163, 36);
+            this.tittle.MaximumSize = new System.Drawing.Size(400, 40);
+            this.tittle.Name = "tittle";
+            this.tittle.ReadOnly = true;
+            this.tittle.ShortcutsEnabled = false;
+            this.tittle.Size = new System.Drawing.Size(356, 36);
+            this.tittle.TabIndex = 23;
+            this.tittle.Text = "ECUACION INTERPOLACION LINEAL";
+            this.tittle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Form8
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 560);
+            this.ClientSize = new System.Drawing.Size(708, 566);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tittle);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.MaximumSize = new System.Drawing.Size(1320, 650);
-            this.MinimumSize = new System.Drawing.Size(691, 0);
+            this.MinimumSize = new System.Drawing.Size(691, 605);
             this.Name = "Form8";
             this.Text = "Form8";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -468,7 +470,6 @@
         }
 
         #endregion
-        private Button button4;
         private DataGridView dataGridView1;
         private GroupBox valoresBox;
         private TextBox FX1Box;
@@ -489,12 +490,13 @@
         private GroupBox groupBox1;
         private TextBox tbDisplay;
         private Label label1;
-        private TextBox tittle;
         private PictureBox pictureBox1;
         private TextBox textBox2;
         private TextBox tbDisplayError;
         private TextBox errorBox;
         private Label label6;
         private GroupBox groupBox2;
+        private TextBox tittle;
+        private Button button4;
     }
 }
