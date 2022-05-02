@@ -1,6 +1,6 @@
 ﻿namespace CALCULADORA_2._0
 {
-    partial class Form9
+    partial class intCuadratica
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form9));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(intCuadratica));
             this.tittle = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tbDisplayError = new System.Windows.Forms.TextBox();

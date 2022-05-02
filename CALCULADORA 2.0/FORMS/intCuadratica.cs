@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CALCULADORA_2._0
 {
-    public partial class Form9 : Form
+    public partial class intCuadratica : Form
     {
         #region VALORES
         private double valor0;
@@ -27,7 +27,7 @@ namespace CALCULADORA_2._0
         #endregion
 
         #region INICIALIZACION
-        public Form9()
+        public intCuadratica()
         {
             InitializeComponent();
         }

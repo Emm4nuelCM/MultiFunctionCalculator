@@ -1,9 +1,9 @@
 namespace CALCULADORA_2._0
 {
-    public partial class Form1 : Form
+    public partial class MENU : Form
     {
         #region INITIALIZE
-        public Form1()
+        public MENU()
         {
             InitializeComponent();
             customizeDesign();
@@ -58,7 +58,7 @@ namespace CALCULADORA_2._0
         //BISECCION
         private void button3_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form3());
+            openChildForm(new noLinealBiseccion());
             hideSubmenu();
         }
 
@@ -101,14 +101,14 @@ namespace CALCULADORA_2._0
         //LINEAL
         private void button8_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form8());
+            openChildForm(new intLineal());
             hideSubmenu();
         }
 
         //CUADRATICA
         private void button7_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form9());
+            openChildForm(new intCuadratica());
             hideSubmenu();
         }
         #endregion

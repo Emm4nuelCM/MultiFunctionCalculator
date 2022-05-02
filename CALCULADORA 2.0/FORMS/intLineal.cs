@@ -1,106 +1,100 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace CALCULADORA_2._0
+﻿namespace CALCULADORA_2._0
 {
-    public partial class Form3 : Form
+    public partial class intLineal : Form
     {
         #region VALORES
-        private string valor0;
+        private double valor0;
         private double valor1;
         private double valor2;
         private double valor3;
         private double valor4;
-        private double potencia;
-        private string letra;
-        //private string fraseInCuad = "Resultado de Interpolacion Cuadratica = ";
-        //private string fraseFin = " Aprox.";
+        private double valor5;
+        private string fraseInLin = "Resultado de Interpolacion Lineal = ";
+        private string fraseFin = " Aprox.";
         private double operacion;
         #endregion
 
         #region INICIALIZACION
-        public Form3()
+        public intLineal()
         {
             InitializeComponent();
         }
         #endregion
 
-        #region CALCULAR
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (String.IsNullOrEmpty(FXBox.Text))
-            {
-                validateUserEntry();
-            }
-            else
-            {
-                valor0 = Convert.ToString(FXBox.Text);
-                if (String.IsNullOrEmpty(paroBox.Text))
-                {
-                    validateUserEntry();
-                }
-                else
-                {
-                    valor1 = Convert.ToDouble(paroBox.Text);
-                    if (String.IsNullOrEmpty(desdeBox.Text))
-                    {
-                        validateUserEntry();
-                    }
-                    else
-                    {
-                        valor2 = Convert.ToDouble(desdeBox.Text);
-                        if (String.IsNullOrEmpty(hastaBox.Text))
-                        {
-                            validateUserEntry();
-                        }
-                        else
-                        {
-                            valor3 = Convert.ToDouble(hastaBox.Text);
-                            for(int i = 0; i < valor0.Length; i++)
-                            {
-                                
-                            }
-                        
-
-                            if (String.IsNullOrEmpty(errorBox.Text))
-                            {
-                                validateUserEntry();
-                            }
-                            else
-                            {
-                                valor4 = Convert.ToDouble(errorBox.Text);
-                                tbDisplayError.Text = (((operacion-valor4) / operacion) * 100).ToString() + "%";
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        #endregion
-
         #region SALIR
-        private void salir_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
         }
         #endregion
 
-        #region LIMPIAR
-        private void button2_Click(object sender, EventArgs e)
+        #region CALCULAR
+        private void calcular_Click(object sender, EventArgs e)
         {
-            errorBox.Text = "";
-            FXBox.Text = "";
-            desdeBox.Text = "";
-            hastaBox.Text = "";
-            paroBox.Text = "";
+            if (String.IsNullOrEmpty(X0Box.Text))
+            {
+                validateUserEntry();
+            }
+            else
+            {
+                valor0 = Convert.ToDouble(X0Box.Text);
+                if (String.IsNullOrEmpty(X1Box.Text))
+                {
+                    validateUserEntry();
+                }
+                else
+                {
+                    valor1 = Convert.ToDouble(X1Box.Text);
+                    if (String.IsNullOrEmpty(XBox.Text))
+                    {
+                        validateUserEntry();
+                    }
+                    else
+                    {
+                        valor2 = Convert.ToDouble(XBox.Text);
+                        if (String.IsNullOrEmpty(FX0Box.Text))
+                        {
+                            validateUserEntry();
+                        }
+                        else
+                        {
+                            valor3 = Convert.ToDouble(FX0Box.Text);
+                            if (String.IsNullOrEmpty(FX1Box.Text))
+                            {
+                                validateUserEntry();
+                            }
+                            else
+                            {
+                                valor4 = Convert.ToDouble(FX1Box.Text);
+                                operacion = (((valor2 - valor1) / (valor0 - valor1)) * valor3) + (((valor2 - valor0) / (valor1 - valor0)) * valor4);
+                                tbDisplay.Text = fraseInLin + operacion.ToString() + fraseFin;
+                                if(String.IsNullOrEmpty(errorBox.Text))
+                                {
+                                    tbDisplayError.Text = "";
+                                } else
+                                {
+                                    valor5 = Convert.ToDouble(errorBox.Text);
+                                    tbDisplayError.Text = (((valor5 - operacion) / valor5) * 100).ToString() + "%";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #endregion
+
+        #region LIMPIAR
+        private void limpiar_Click(object sender, EventArgs e)
+        {
+            X0Box.Text = "";
+            X1Box.Text = "";
+            FX0Box.Text = "";
+            FX1Box.Text = "";
+            XBox.Text = "";
+            tbDisplay.Text = "";
             tbDisplayError.Text = "";
+            errorBox.Text = "";
         }
         #endregion
 
@@ -123,17 +117,6 @@ namespace CALCULADORA_2._0
         }
         #endregion
 
-        #region RECIBIR FORMULA
-        private void Box2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '.') && (e.KeyChar != '^') && (e.KeyChar != 'x'))
-            {
-                e.Handled = true;
-            }
-        }
-        #endregion
-
         #region SOLONUMEROS
         private void Box_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -144,5 +127,7 @@ namespace CALCULADORA_2._0
             }
         }
         #endregion
+
+        
     }
 }

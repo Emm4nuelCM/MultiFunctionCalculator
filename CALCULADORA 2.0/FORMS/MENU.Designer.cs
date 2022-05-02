@@ -1,6 +1,6 @@
 ﻿namespace CALCULADORA_2._0
 {
-    partial class Form1
+    partial class MENU
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MENU));
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelSubmenu3 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();

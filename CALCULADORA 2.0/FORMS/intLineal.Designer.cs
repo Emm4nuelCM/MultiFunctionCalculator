@@ -1,6 +1,6 @@
 ﻿namespace CALCULADORA_2._0
 {
-    partial class Form8
+    partial class intLineal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form8));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(intLineal));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.valoresBox = new System.Windows.Forms.GroupBox();
             this.errorBox = new System.Windows.Forms.TextBox();

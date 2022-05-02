@@ -1,6 +1,6 @@
 ﻿namespace CALCULADORA_2._0
 {
-    partial class Form3
+    partial class noLinealBiseccion
     {
         /// <summary>
         /// Required designer variable.
@@ -33,8 +33,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.hastaBox = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.errorBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.desdeBox = new System.Windows.Forms.TextBox();
             this.FXBox = new System.Windows.Forms.TextBox();
@@ -47,9 +45,15 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbDisplayError = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dgvResults = new System.Windows.Forms.DataGridView();
+            this.iter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valoresBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
             this.SuspendLayout();
             // 
             // tittle
@@ -114,35 +118,11 @@
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(241, 32);
+            this.label12.Location = new System.Drawing.Point(280, 35);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 30);
+            this.label12.Size = new System.Drawing.Size(46, 30);
             this.label12.TabIndex = 24;
-            this.label12.Text = "Hasta:";
-            // 
-            // errorBox
-            // 
-            this.errorBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.errorBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.errorBox.Location = new System.Drawing.Point(335, 94);
-            this.errorBox.Multiline = true;
-            this.errorBox.Name = "errorBox";
-            this.errorBox.ShortcutsEnabled = false;
-            this.errorBox.Size = new System.Drawing.Size(130, 30);
-            this.errorBox.TabIndex = 20;
-            this.errorBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.errorBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box_KeyPress);
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(281, 92);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 30);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Er=";
+            this.label12.Text = "Xu:";
             // 
             // label1
             // 
@@ -150,7 +130,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(3, 92);
+            this.label1.Location = new System.Drawing.Point(3, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 30);
             this.label1.TabIndex = 17;
@@ -187,11 +167,11 @@
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(8, 32);
+            this.label11.Location = new System.Drawing.Point(54, 35);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 30);
+            this.label11.Size = new System.Drawing.Size(39, 30);
             this.label11.TabIndex = 13;
-            this.label11.Text = "Desde:";
+            this.label11.Text = "Xi:";
             // 
             // label9
             // 
@@ -236,8 +216,6 @@
             this.valoresBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.valoresBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.valoresBox.Controls.Add(this.groupBox2);
-            this.valoresBox.Controls.Add(this.errorBox);
-            this.valoresBox.Controls.Add(this.label6);
             this.valoresBox.Controls.Add(this.label1);
             this.valoresBox.Controls.Add(this.FXBox);
             this.valoresBox.Controls.Add(this.label9);
@@ -312,23 +290,66 @@
             this.textBox2.Text = "ERROR PORCENTUAL=";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Form3
+            // dgvResults
+            // 
+            this.dgvResults.AllowUserToAddRows = false;
+            this.dgvResults.AllowUserToDeleteRows = false;
+            this.dgvResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iter,
+            this.xr,
+            this.paro,
+            this.FX});
+            this.dgvResults.Location = new System.Drawing.Point(141, 89);
+            this.dgvResults.Name = "dgvResults";
+            this.dgvResults.ReadOnly = true;
+            this.dgvResults.RowTemplate.Height = 25;
+            this.dgvResults.Size = new System.Drawing.Size(444, 169);
+            this.dgvResults.TabIndex = 39;
+            // 
+            // iter
+            // 
+            this.iter.HeaderText = "Iteracion";
+            this.iter.Name = "iter";
+            this.iter.ReadOnly = true;
+            // 
+            // xr
+            // 
+            this.xr.HeaderText = "Xr";
+            this.xr.Name = "xr";
+            this.xr.ReadOnly = true;
+            // 
+            // paro
+            // 
+            this.paro.HeaderText = "Er";
+            this.paro.Name = "paro";
+            this.paro.ReadOnly = true;
+            // 
+            // FX
+            // 
+            this.FX.HeaderText = "FX";
+            this.FX.Name = "FX";
+            this.FX.ReadOnly = true;
+            // 
+            // noLinealBiseccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(708, 604);
+            this.Controls.Add(this.dgvResults);
             this.Controls.Add(this.tbDisplayError);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tittle);
-            this.Name = "Form3";
+            this.Name = "noLinealBiseccion";
             this.Text = "Form3";
             this.valoresBox.ResumeLayout(false);
             this.valoresBox.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,8 +362,6 @@
         private Button button3;
         private TextBox hastaBox;
         private Label label12;
-        private TextBox errorBox;
-        private Label label6;
         private Label label1;
         private TextBox desdeBox;
         private TextBox FXBox;
@@ -355,5 +374,10 @@
         private GroupBox groupBox2;
         private TextBox tbDisplayError;
         private TextBox textBox2;
+        private DataGridViewTextBoxColumn paro;
+        private DataGridView dgvResults;
+        private DataGridViewTextBoxColumn iter;
+        private DataGridViewTextBoxColumn xr;
+        private DataGridViewTextBoxColumn FX;
     }
 }
