@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace CALCULADORA_2._0
 {
-    public partial class noLinealBiseccion : Form
+    public partial class noLinealFalsaPosicion : Form
     {
         #region VALORES
         private string funcion;
@@ -21,13 +21,13 @@ namespace CALCULADORA_2._0
         #endregion
 
         #region INICIALIZACION
-        public noLinealBiseccion()
+        public noLinealFalsaPosicion()
         {
             InitializeComponent();
         }
         #endregion
 
-        #region Verificar Campos
+        #region VERIFICAR CAMPOS
         private void button3_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(FXBox.Text))
@@ -201,6 +201,7 @@ namespace CALCULADORA_2._0
 
             return result;
         }
-        #endregion
+
+        #endregion 
     }
 }

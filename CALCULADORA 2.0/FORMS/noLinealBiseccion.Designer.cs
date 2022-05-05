@@ -43,20 +43,15 @@
             this.valoresBox = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbDisplayError = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.dgvResults = new System.Windows.Forms.DataGridView();
             this.iter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valoresBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
             this.SuspendLayout();
             // 
             // tittle
@@ -264,35 +259,6 @@
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             // 
-            // tbDisplayError
-            // 
-            this.tbDisplayError.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.tbDisplayError.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbDisplayError.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tbDisplayError.Location = new System.Drawing.Point(260, 290);
-            this.tbDisplayError.Multiline = true;
-            this.tbDisplayError.Name = "tbDisplayError";
-            this.tbDisplayError.ReadOnly = true;
-            this.tbDisplayError.ShortcutsEnabled = false;
-            this.tbDisplayError.Size = new System.Drawing.Size(409, 25);
-            this.tbDisplayError.TabIndex = 37;
-            this.tbDisplayError.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(39, 290);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.ShortcutsEnabled = false;
-            this.textBox2.Size = new System.Drawing.Size(220, 25);
-            this.textBox2.TabIndex = 36;
-            this.textBox2.Text = "ERROR PORCENTUAL=";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // dgvResults
             // 
             this.dgvResults.AllowUserToAddRows = false;
@@ -303,11 +269,11 @@
             this.xr,
             this.paro,
             this.FX});
-            this.dgvResults.Location = new System.Drawing.Point(242, 89);
+            this.dgvResults.Location = new System.Drawing.Point(130, 97);
             this.dgvResults.Name = "dgvResults";
             this.dgvResults.ReadOnly = true;
             this.dgvResults.RowTemplate.Height = 25;
-            this.dgvResults.Size = new System.Drawing.Size(444, 169);
+            this.dgvResults.Size = new System.Drawing.Size(439, 199);
             this.dgvResults.TabIndex = 39;
             // 
             // iter
@@ -334,36 +300,13 @@
             this.FX.Name = "FX";
             this.FX.ReadOnly = true;
             // 
-            // dgv2
-            // 
-            this.dgv2.AllowUserToAddRows = false;
-            this.dgv2.AllowUserToDeleteRows = false;
-            this.dgv2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn4});
-            this.dgv2.Location = new System.Drawing.Point(59, 103);
-            this.dgv2.Name = "dgv2";
-            this.dgv2.ReadOnly = true;
-            this.dgv2.RowTemplate.Height = 25;
-            this.dgv2.Size = new System.Drawing.Size(144, 143);
-            this.dgv2.TabIndex = 40;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "FX";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
             // noLinealBiseccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(708, 604);
-            this.Controls.Add(this.dgv2);
             this.Controls.Add(this.dgvResults);
-            this.Controls.Add(this.tbDisplayError);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tittle);
             this.Name = "noLinealBiseccion";
@@ -374,7 +317,6 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -397,14 +339,10 @@
         private GroupBox valoresBox;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private TextBox tbDisplayError;
-        private TextBox textBox2;
         private DataGridViewTextBoxColumn paro;
         private DataGridView dgvResults;
         private DataGridViewTextBoxColumn iter;
         private DataGridViewTextBoxColumn xr;
         private DataGridViewTextBoxColumn FX;
-        private DataGridView dgv2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

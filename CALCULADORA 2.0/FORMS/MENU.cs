@@ -65,7 +65,7 @@ namespace CALCULADORA_2._0
         //FALSA POSICION
         private void button4_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form4());
+            openChildForm(new noLinealFalsaPosicion());
             hideSubmenu();
         }
 
