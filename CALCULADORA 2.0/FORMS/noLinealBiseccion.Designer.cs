@@ -50,10 +50,13 @@
             this.xr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.paro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valoresBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
             this.SuspendLayout();
             // 
             // tittle
@@ -300,7 +303,7 @@
             this.xr,
             this.paro,
             this.FX});
-            this.dgvResults.Location = new System.Drawing.Point(141, 89);
+            this.dgvResults.Location = new System.Drawing.Point(242, 89);
             this.dgvResults.Name = "dgvResults";
             this.dgvResults.ReadOnly = true;
             this.dgvResults.RowTemplate.Height = 25;
@@ -331,12 +334,33 @@
             this.FX.Name = "FX";
             this.FX.ReadOnly = true;
             // 
+            // dgv2
+            // 
+            this.dgv2.AllowUserToAddRows = false;
+            this.dgv2.AllowUserToDeleteRows = false;
+            this.dgv2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4});
+            this.dgv2.Location = new System.Drawing.Point(59, 103);
+            this.dgv2.Name = "dgv2";
+            this.dgv2.ReadOnly = true;
+            this.dgv2.RowTemplate.Height = 25;
+            this.dgv2.Size = new System.Drawing.Size(144, 143);
+            this.dgv2.TabIndex = 40;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "FX";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
             // noLinealBiseccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.ClientSize = new System.Drawing.Size(708, 604);
+            this.Controls.Add(this.dgv2);
             this.Controls.Add(this.dgvResults);
             this.Controls.Add(this.tbDisplayError);
             this.Controls.Add(this.textBox2);
@@ -350,6 +374,7 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,5 +404,7 @@
         private DataGridViewTextBoxColumn iter;
         private DataGridViewTextBoxColumn xr;
         private DataGridViewTextBoxColumn FX;
+        private DataGridView dgv2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

@@ -27,7 +27,7 @@ namespace CALCULADORA_2._0
         }
         #endregion
 
-        #region CALCULAR
+        #region Verificar Campos
         private void button3_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(FXBox.Text))
@@ -36,8 +36,8 @@ namespace CALCULADORA_2._0
             }
             else
             {
+                double x;
                 funcion = Convert.ToString(FXBox.Text);
-                //String[] valor01 = funcion.Split("");
                 if (String.IsNullOrEmpty(paroBox.Text))
                 {
                     validateUserEntry();
@@ -58,74 +58,61 @@ namespace CALCULADORA_2._0
                         }
                         else
                         {
-                            xu = Convert.ToDouble(hastaBox.Text);
-                            int imax, iter;
-                            double ea, xa, xaold;
-
-                            /* xi = a
-                             * xd = b
-                             * imax = iteraciones maximas
-                             * em = error minimo
-                             * 
-                             * iter = numero de iteraciones
-                             * imax = iteraciones maximas
-                             */
-
-
-                            imax = 30; //int.Parse(txtNmax.Text);
-
-                            dgvResults.Rows.Clear();
-                            //dgvResultAprox.Rows.Clear();
-
-                            iter = 0;
-                            xa = 0;
-
-                            //if (function(xi) * function(xu) > 0)
-                            //{
-                            //    MessageBox.Show("No existe raíz en esos intérvalos.");
-                            //}
-                            //else
-                            //{
-                                do
-                                {
-                                    iter++;
-
-                                    xaold = xa;
-                                    xa = (xi + xu) / 2;
-
-                                    ea = Math.Abs((xa - xaold) / xa) * 100;
-
-                                    if (function(xi) * function(xa) < 0)
-                                    {
-                                        xu = xa;
-                                    }
-                                    else if (function(xi) * function(xa) > 0)
-                                    {
-                                        xi = xa;
-                                    }
-                                    else
-                                    {
-                                        ea = 0;
-                                    }
-
-                                    int n1 = dgvResults.Rows.Add();
-
-                                    dgvResults.Rows[n1].Cells[0].Value = iter;
-                                    dgvResults.Rows[n1].Cells[1].Value = xa;
-                                    dgvResults.Rows[n1].Cells[2].Value = ea + " %";
-                                    dgvResults.Rows[n1].Cells[3].Value = function(xa);
-
-                            } while (ea > factParo && iter <= imax);
-
-                                //int n2 = dgvResultAprox.Rows.Add();
-
-                                //dgvResultAprox.Rows[n2].Cells[0].Value = iter;
-                                //dgvResultAprox.Rows[n2].Cells[1].Value = xa;
-                                //dgvResultAprox.Rows[n2].Cells[2].Value = ea + " %";
-                            //}
+                            calcular();
                         }
                     }
                 }
+            }
+        }
+        #endregion
+
+        #region Calcular
+        private void calcular()
+        {
+            xu = Convert.ToDouble(hastaBox.Text);
+            int imax, iter;
+            double ea, xa, xaold;
+            imax = 30;
+            dgvResults.Rows.Clear();
+            iter = 0;
+            xa = 0;
+
+            if (function(xi) * function(xu) > 0)
+            {
+                MessageBox.Show("No existe raíz en esos intérvalos.");
+            }
+            else
+            {
+                do
+                {
+                    iter++;
+
+                    xaold = xa;
+                    xa = (xi + xu) / 2;
+
+                    ea = Math.Abs((xa - xaold) / xa) * 100;
+
+                    if (function(xi) * function(xa) < 0)
+                    {
+                        xu = xa;
+                    }
+                    else if (function(xi) * function(xa) > 0)
+                    {
+                        xi = xa;
+                    }
+                    else
+                    {
+                        ea = 0;
+                    }
+
+                    int n1 = dgvResults.Rows.Add();
+
+                    dgvResults.Rows[n1].Cells[0].Value = iter;
+                    dgvResults.Rows[n1].Cells[1].Value = xa;
+                    dgvResults.Rows[n1].Cells[2].Value = ea + " %";
+                    dgvResults.Rows[n1].Cells[3].Value = function(xa);
+
+                } while (ea > factParo && iter <= imax);
             }
         }
         #endregion
@@ -171,7 +158,7 @@ namespace CALCULADORA_2._0
         private void Box2_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '.') && (e.KeyChar != '^') && (e.KeyChar != 'x') && (e.KeyChar != '-') && (e.KeyChar != '+'))
+                (e.KeyChar != '.') && (e.KeyChar != '^') && (e.KeyChar != 'x') && (e.KeyChar != '-') && (e.KeyChar != '+') && (e.KeyChar != '*'))
             {
                 e.Handled = true;
             }
@@ -205,6 +192,10 @@ namespace CALCULADORA_2._0
             else
             {
                 expression = FXBox.Text.Replace("x", x.ToString());
+                int n2 = dgv2.Rows.Add();
+                dgv2.Rows[n2].Cells[0].Value = expression;
+                //dgv2.Rows[n2].Cells[0].Value = function(xu);
+                //dgv2.Rows[n2].Cells[0].Value = function(xu)*function(xi);
             }
 
             double result = sc.Eval(expression);
