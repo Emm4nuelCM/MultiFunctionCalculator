@@ -29,12 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvResults = new System.Windows.Forms.DataGridView();
-            this.iter = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.xr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.salir = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.valoresBox = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -46,8 +41,13 @@
             this.FXBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.paroBox = new System.Windows.Forms.TextBox();
+            this.salir = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.tittle = new System.Windows.Forms.TextBox();
+            this.iter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.valoresBox.SuspendLayout();
@@ -62,38 +62,14 @@
             this.dgvResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iter,
             this.xr,
-            this.paro,
-            this.FX});
-            this.dgvResults.Location = new System.Drawing.Point(130, 97);
+            this.FX,
+            this.paro});
+            this.dgvResults.Location = new System.Drawing.Point(144, 85);
             this.dgvResults.Name = "dgvResults";
             this.dgvResults.ReadOnly = true;
             this.dgvResults.RowTemplate.Height = 25;
-            this.dgvResults.Size = new System.Drawing.Size(439, 199);
+            this.dgvResults.Size = new System.Drawing.Size(411, 205);
             this.dgvResults.TabIndex = 42;
-            // 
-            // iter
-            // 
-            this.iter.HeaderText = "Iteracion";
-            this.iter.Name = "iter";
-            this.iter.ReadOnly = true;
-            // 
-            // xr
-            // 
-            this.xr.HeaderText = "Xr";
-            this.xr.Name = "xr";
-            this.xr.ReadOnly = true;
-            // 
-            // paro
-            // 
-            this.paro.HeaderText = "Er";
-            this.paro.Name = "paro";
-            this.paro.ReadOnly = true;
-            // 
-            // FX
-            // 
-            this.FX.HeaderText = "FX";
-            this.FX.Name = "FX";
-            this.FX.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -109,20 +85,6 @@
             this.groupBox1.Size = new System.Drawing.Size(708, 267);
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
-            // 
-            // salir
-            // 
-            this.salir.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.salir.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.salir.Location = new System.Drawing.Point(24, 124);
-            this.salir.Name = "salir";
-            this.salir.Size = new System.Drawing.Size(72, 40);
-            this.salir.TabIndex = 15;
-            this.salir.Text = "<---SALIR";
-            this.salir.UseVisualStyleBackColor = false;
-            this.salir.Click += new System.EventHandler(this.salir_Click);
             // 
             // button2
             // 
@@ -270,6 +232,20 @@
             this.paroBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.paroBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box_KeyPress);
             // 
+            // salir
+            // 
+            this.salir.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.salir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salir.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.salir.Location = new System.Drawing.Point(24, 124);
+            this.salir.Name = "salir";
+            this.salir.Size = new System.Drawing.Size(72, 40);
+            this.salir.TabIndex = 15;
+            this.salir.Text = "<---SALIR";
+            this.salir.UseVisualStyleBackColor = false;
+            this.salir.Click += new System.EventHandler(this.salir_Click);
+            // 
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -300,6 +276,31 @@
             this.tittle.Text = "ECUACION NO LINEAL FALSA POSICION";
             this.tittle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // iter
+            // 
+            this.iter.HeaderText = "ITERACION";
+            this.iter.Name = "iter";
+            this.iter.ReadOnly = true;
+            this.iter.Width = 70;
+            // 
+            // xr
+            // 
+            this.xr.HeaderText = "Xr";
+            this.xr.Name = "xr";
+            this.xr.ReadOnly = true;
+            // 
+            // FX
+            // 
+            this.FX.HeaderText = "F(Xr)";
+            this.FX.Name = "FX";
+            this.FX.ReadOnly = true;
+            // 
+            // paro
+            // 
+            this.paro.HeaderText = "Ɛa";
+            this.paro.Name = "paro";
+            this.paro.ReadOnly = true;
+            // 
             // noLinealFalsaPosicion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -325,10 +326,6 @@
         #endregion
 
         private DataGridView dgvResults;
-        private DataGridViewTextBoxColumn iter;
-        private DataGridViewTextBoxColumn xr;
-        private DataGridViewTextBoxColumn paro;
-        private DataGridViewTextBoxColumn FX;
         private GroupBox groupBox1;
         private Button salir;
         private Button button2;
@@ -344,5 +341,9 @@
         private TextBox paroBox;
         private Button button3;
         private TextBox tittle;
+        private DataGridViewTextBoxColumn iter;
+        private DataGridViewTextBoxColumn xr;
+        private DataGridViewTextBoxColumn FX;
+        private DataGridViewTextBoxColumn paro;
     }
 }

@@ -269,18 +269,19 @@
             this.xr,
             this.paro,
             this.FX});
-            this.dgvResults.Location = new System.Drawing.Point(130, 97);
+            this.dgvResults.Location = new System.Drawing.Point(142, 97);
             this.dgvResults.Name = "dgvResults";
             this.dgvResults.ReadOnly = true;
             this.dgvResults.RowTemplate.Height = 25;
-            this.dgvResults.Size = new System.Drawing.Size(439, 199);
+            this.dgvResults.Size = new System.Drawing.Size(412, 199);
             this.dgvResults.TabIndex = 39;
             // 
             // iter
             // 
-            this.iter.HeaderText = "Iteracion";
+            this.iter.HeaderText = "ITERACION";
             this.iter.Name = "iter";
             this.iter.ReadOnly = true;
+            this.iter.Width = 70;
             // 
             // xr
             // 
@@ -290,13 +291,13 @@
             // 
             // paro
             // 
-            this.paro.HeaderText = "Er";
+            this.paro.HeaderText = "Ɛa";
             this.paro.Name = "paro";
             this.paro.ReadOnly = true;
             // 
             // FX
             // 
-            this.FX.HeaderText = "FX";
+            this.FX.HeaderText = "F(Xr)";
             this.FX.Name = "FX";
             this.FX.ReadOnly = true;
             // 
@@ -339,10 +340,10 @@
         private GroupBox valoresBox;
         private GroupBox groupBox1;
         private GroupBox groupBox2;
-        private DataGridViewTextBoxColumn paro;
         private DataGridView dgvResults;
         private DataGridViewTextBoxColumn iter;
         private DataGridViewTextBoxColumn xr;
+        private DataGridViewTextBoxColumn paro;
         private DataGridViewTextBoxColumn FX;
     }
 }

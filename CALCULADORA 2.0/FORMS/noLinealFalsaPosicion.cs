@@ -51,7 +51,6 @@ namespace CALCULADORA_2._0
                     }
                     else
                     {
-                        xi = Convert.ToDouble(desdeBox.Text);
                         if (String.IsNullOrEmpty(hastaBox.Text))
                         {
                             validateUserEntry();
@@ -70,35 +69,45 @@ namespace CALCULADORA_2._0
         private void calcular()
         {
             xu = Convert.ToDouble(hastaBox.Text);
+            xi = Convert.ToDouble(desdeBox.Text);
             int imax, iter;
-            double ea, xa, xaold;
+            double ea, fxi, fxu, fxr, xr,xrold;
             imax = 30;
             dgvResults.Rows.Clear();
             iter = 0;
-            xa = 0;
+            xr = 0;
+            fxi = function(xi);
+            fxu = function(xu);
+            
+            
 
-            if (function(xi) * function(xu) > 0)
-            {
-                MessageBox.Show("No existe raíz en esos intérvalos.");
-            }
-            else
-            {
+            //if (function(xi) * function(xu) > 0)
+            //{
+              //  MessageBox.Show("No existe raíz en esos intérvalos.");
+            //}
+            //else
+            //{
                 do
                 {
                     iter++;
 
-                    xaold = xa;
-                    xa = (xi + xu) / 2;
+                    xrold = xr;
+                    xr = (xu-((fxu*(xi-xu)))/(fxi-fxu));
+                    fxr = function(xr);
 
-                    ea = Math.Abs((xa - xaold) / xa) * 100;
+                    ea = Math.Abs((xr - xrold) / xr) * 100;
 
-                    if (function(xi) * function(xa) < 0)
+                    if (function(xr) * function(xi) < 0)
                     {
-                        xu = xa;
+                        fxi = (fxi / 2);
+                        xu = xr;
+                        fxu = fxr;
                     }
-                    else if (function(xi) * function(xa) > 0)
+                    else if (function(xr) * function(xi) > 0)
                     {
-                        xi = xa;
+                        xi = xr;
+                        fxi = fxr;
+                        fxu = (fxu / 2);
                     }
                     else
                     {
@@ -108,12 +117,12 @@ namespace CALCULADORA_2._0
                     int n1 = dgvResults.Rows.Add();
 
                     dgvResults.Rows[n1].Cells[0].Value = iter;
-                    dgvResults.Rows[n1].Cells[1].Value = xa;
+                    dgvResults.Rows[n1].Cells[1].Value = xr;
                     dgvResults.Rows[n1].Cells[2].Value = ea + " %";
-                    dgvResults.Rows[n1].Cells[3].Value = function(xa);
+                    dgvResults.Rows[n1].Cells[3].Value = function(xr);
 
                 } while (ea > factParo && iter <= imax);
-            }
+            //}
         }
         #endregion
 
@@ -157,7 +166,7 @@ namespace CALCULADORA_2._0
         private void Box2_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '.') && (e.KeyChar != '^') && (e.KeyChar != 'x') && (e.KeyChar != '-') && (e.KeyChar != '+') && (e.KeyChar != '*'))
+                (e.KeyChar != '.') && (e.KeyChar != '^') && (e.KeyChar != 'x') && (e.KeyChar != '-') && (e.KeyChar != '+') && (e.KeyChar != '*') && (e.KeyChar != 'e'))
             {
                 e.Handled = true;
             }
