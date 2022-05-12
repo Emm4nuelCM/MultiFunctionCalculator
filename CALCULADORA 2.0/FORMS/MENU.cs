@@ -72,7 +72,7 @@ namespace CALCULADORA_2._0
         //NEWTON
         private void button1_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form5());
+            openChildForm(new noLInealNewton());
             hideSubmenu();
         }
 
