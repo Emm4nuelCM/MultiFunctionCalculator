@@ -30,10 +30,6 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgvResults = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.desdeBox = new System.Windows.Forms.TextBox();
@@ -48,6 +44,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -77,39 +76,13 @@
             this.dgvResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            this.dgvResults.Location = new System.Drawing.Point(144, 85);
+            this.dgvResults.Location = new System.Drawing.Point(190, 111);
             this.dgvResults.Name = "dgvResults";
             this.dgvResults.ReadOnly = true;
             this.dgvResults.RowTemplate.Height = 25;
-            this.dgvResults.Size = new System.Drawing.Size(411, 205);
+            this.dgvResults.Size = new System.Drawing.Size(313, 205);
             this.dgvResults.TabIndex = 42;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ITERACION";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Xr";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "F(Xr)";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Ɛa";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // button1
             // 
@@ -118,7 +91,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(598, 175);
+            this.button1.Location = new System.Drawing.Point(598, 147);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 33);
             this.button1.TabIndex = 18;
@@ -131,7 +104,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(34, 35);
+            this.label2.Location = new System.Drawing.Point(11, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 30);
             this.label2.TabIndex = 13;
@@ -141,12 +114,13 @@
             // 
             this.desdeBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.desdeBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.desdeBox.Location = new System.Drawing.Point(76, 36);
+            this.desdeBox.Location = new System.Drawing.Point(53, 36);
             this.desdeBox.Multiline = true;
             this.desdeBox.Name = "desdeBox";
             this.desdeBox.ShortcutsEnabled = false;
             this.desdeBox.Size = new System.Drawing.Size(129, 30);
             this.desdeBox.TabIndex = 16;
+            this.desdeBox.Text = "-1";
             this.desdeBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.desdeBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box_KeyPress);
             // 
@@ -158,9 +132,9 @@
             this.groupBox1.Controls.Add(this.desdeBox);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(8, 141);
+            this.groupBox1.Location = new System.Drawing.Point(8, 90);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(475, 84);
+            this.groupBox1.Size = new System.Drawing.Size(211, 84);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "UBICACION DE RAIZ";
@@ -171,7 +145,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.label3.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(5, 94);
+            this.label3.Location = new System.Drawing.Point(245, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(170, 30);
             this.label3.TabIndex = 17;
@@ -181,12 +155,13 @@
             // 
             this.FXBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.FXBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.FXBox.Location = new System.Drawing.Point(79, 43);
+            this.FXBox.Location = new System.Drawing.Point(79, 40);
             this.FXBox.Multiline = true;
             this.FXBox.Name = "FXBox";
             this.FXBox.ShortcutsEnabled = false;
             this.FXBox.Size = new System.Drawing.Size(388, 30);
             this.FXBox.TabIndex = 15;
+            this.FXBox.Text = "x^3-x+1";
             this.FXBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.FXBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box2_KeyPress);
             // 
@@ -195,7 +170,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(8, 43);
+            this.label4.Location = new System.Drawing.Point(8, 40);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 30);
             this.label4.TabIndex = 11;
@@ -205,11 +180,12 @@
             // 
             this.paroBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.paroBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.paroBox.Location = new System.Drawing.Point(176, 95);
+            this.paroBox.Location = new System.Drawing.Point(416, 136);
             this.paroBox.Name = "paroBox";
             this.paroBox.ShortcutsEnabled = false;
             this.paroBox.Size = new System.Drawing.Size(43, 29);
             this.paroBox.TabIndex = 7;
+            this.paroBox.Text = "1";
             this.paroBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.paroBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box_KeyPress);
             // 
@@ -228,7 +204,7 @@
             this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(104, 22);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(487, 233);
+            this.groupBox2.Size = new System.Drawing.Size(487, 186);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "VALORES";
@@ -237,12 +213,13 @@
             // 
             this.derivadaBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.derivadaBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.derivadaBox.Location = new System.Drawing.Point(291, 98);
+            this.derivadaBox.Location = new System.Drawing.Point(291, 92);
             this.derivadaBox.Multiline = true;
             this.derivadaBox.Name = "derivadaBox";
             this.derivadaBox.ShortcutsEnabled = false;
             this.derivadaBox.Size = new System.Drawing.Size(176, 30);
             this.derivadaBox.TabIndex = 29;
+            this.derivadaBox.Text = "3*x^2-1";
             this.derivadaBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.derivadaBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box2_KeyPress);
             // 
@@ -251,7 +228,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(225, 97);
+            this.label5.Location = new System.Drawing.Point(225, 91);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 30);
             this.label5.TabIndex = 28;
@@ -263,7 +240,7 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(24, 124);
+            this.button2.Location = new System.Drawing.Point(21, 99);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(72, 40);
             this.button2.TabIndex = 15;
@@ -278,7 +255,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(597, 92);
+            this.button3.Location = new System.Drawing.Point(597, 64);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(99, 33);
             this.button3.TabIndex = 19;
@@ -295,11 +272,30 @@
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox3.Location = new System.Drawing.Point(0, 332);
+            this.groupBox3.Location = new System.Drawing.Point(0, 381);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(708, 267);
+            this.groupBox3.Size = new System.Drawing.Size(708, 227);
             this.groupBox3.TabIndex = 41;
             this.groupBox3.TabStop = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "ITERACION";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Xr";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Ɛa";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // noLInealNewton
             // 
@@ -327,10 +323,6 @@
 
         private TextBox textBox1;
         private DataGridView dgvResults;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private Button button1;
         private Label label2;
         private TextBox desdeBox;
@@ -345,5 +337,8 @@
         private GroupBox groupBox3;
         private Label label5;
         private TextBox derivadaBox;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

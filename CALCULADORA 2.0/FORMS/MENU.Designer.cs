@@ -36,6 +36,7 @@
             this.button12 = new System.Windows.Forms.Button();
             this.master3 = new System.Windows.Forms.Button();
             this.panelSubmenu2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.master2 = new System.Windows.Forms.Button();
@@ -50,13 +51,16 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelOptionMaster = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panelSubmenu3.SuspendLayout();
             this.panelSubmenu2.SuspendLayout();
             this.panelSubmenu1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelOptionMaster.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -163,6 +167,21 @@
             this.panelSubmenu2.Name = "panelSubmenu2";
             this.panelSubmenu2.Size = new System.Drawing.Size(116, 123);
             this.panelSubmenu2.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.LightGray;
+            this.button2.Location = new System.Drawing.Point(0, 80);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(116, 37);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Newton";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // button7
             // 
@@ -363,6 +382,8 @@
             // panelOptionMaster
             // 
             this.panelOptionMaster.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.panelOptionMaster.Controls.Add(this.textBox1);
+            this.panelOptionMaster.Controls.Add(this.pictureBox2);
             this.panelOptionMaster.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelOptionMaster.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelOptionMaster.Location = new System.Drawing.Point(133, 0);
@@ -370,22 +391,30 @@
             this.panelOptionMaster.Size = new System.Drawing.Size(717, 581);
             this.panelOptionMaster.TabIndex = 1;
             // 
-            // button2
+            // textBox1
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.LightGray;
-            this.button2.Location = new System.Drawing.Point(0, 80);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(116, 37);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Newton";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = true;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Menu;
+            this.textBox1.Location = new System.Drawing.Point(168, 479);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(374, 29);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "CALCULADORA MULTIPLE APLICACION";
             // 
-            // Form1
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(185, 124);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(336, 322);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // MENU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -393,7 +422,7 @@
             this.ClientSize = new System.Drawing.Size(850, 581);
             this.Controls.Add(this.panelOptionMaster);
             this.Controls.Add(this.panelSideMenu);
-            this.Name = "Form1";
+            this.Name = "MENU";
             this.Text = "CALCULADORA";
             this.panelSideMenu.ResumeLayout(false);
             this.panelSubmenu3.ResumeLayout(false);
@@ -401,6 +430,9 @@
             this.panelSubmenu1.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelOptionMaster.ResumeLayout(false);
+            this.panelOptionMaster.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -429,5 +461,7 @@
         private Button button5;
         private Button button1;
         private Button button2;
+        private PictureBox pictureBox2;
+        private TextBox textBox1;
     }
 }

@@ -17,7 +17,7 @@ namespace CALCULADORA_2._0
         private double xi;
         private double xu;
         private double factParo;
-        private double operacion;
+        //private double operacion;
         #endregion
 
         #region INICIALIZACION
@@ -36,7 +36,7 @@ namespace CALCULADORA_2._0
             }
             else
             {
-                double x;
+                
                 funcion = Convert.ToString(FXBox.Text);
                 if (String.IsNullOrEmpty(paroBox.Text))
                 {
@@ -76,6 +76,7 @@ namespace CALCULADORA_2._0
             dgvResults.Rows.Clear();
             iter = 0;
             xa = 0;
+            
 
             if (function(xi) * function(xu) > 0)
             {
