@@ -83,7 +83,7 @@
             this.fxi,
             this.dfxi,
             this.xii});
-            this.dgvResults.Location = new System.Drawing.Point(21, 104);
+            this.dgvResults.Location = new System.Drawing.Point(39, 104);
             this.dgvResults.Name = "dgvResults";
             this.dgvResults.ReadOnly = true;
             this.dgvResults.RowTemplate.Height = 25;
