@@ -49,42 +49,42 @@ namespace CALCULADORA_2._0
         }
 
         //BAIRSTOW
-        private void button2_Click(object sender, EventArgs e)
+        private void bairstow_Click(object sender, EventArgs e)
         {
             openChildForm(new Form2());
             hideSubmenu();
         }
 
         //BISECCION
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
             openChildForm(new noLinealBiseccion());
             hideSubmenu();
         }
 
         //FALSA POSICION
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
         {
             openChildForm(new noLinealFalsaPosicion());
             hideSubmenu();
         }
 
         //NEWTON
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             openChildForm(new noLInealNewton());
             hideSubmenu();
         }
 
         //SECANTE
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click_1(object sender, EventArgs e)
         {
             openChildForm(new Form6());
             hideSubmenu();
         }
 
         //SUSTITUCION SUCESIVA
-        private void button9_Click(object sender, EventArgs e)
+        private void button9_Click_1(object sender, EventArgs e)
         {
             openChildForm(new Form7());
             hideSubmenu();
@@ -99,14 +99,14 @@ namespace CALCULADORA_2._0
         }
 
         //LINEAL
-        private void button8_Click(object sender, EventArgs e)
+        private void button8_Click_1(object sender, EventArgs e)
         {
             openChildForm(new intLineal());
             hideSubmenu();
         }
 
         //CUADRATICA
-        private void button7_Click(object sender, EventArgs e)
+        private void button7_Click_1(object sender, EventArgs e)
         {
             openChildForm(new intCuadratica());
             hideSubmenu();
@@ -114,7 +114,7 @@ namespace CALCULADORA_2._0
         #endregion
 
 
-        #region SUBMENU3
+        #region INTEGRALES
 
         private void master3_Click(object sender, EventArgs e)
         {
@@ -153,8 +153,9 @@ namespace CALCULADORA_2._0
             optionMaster.BringToFront();
             optionMaster.Show();
         }
+
         #endregion
 
-        
+       
     }
 }
