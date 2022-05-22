@@ -256,17 +256,18 @@
             // derivadaBox
             // 
             this.derivadaBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.derivadaBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.derivadaBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.derivadaBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.derivadaBox.Location = new System.Drawing.Point(291, 92);
+            this.derivadaBox.ForeColor = System.Drawing.SystemColors.Menu;
+            this.derivadaBox.Location = new System.Drawing.Point(295, 96);
             this.derivadaBox.Multiline = true;
             this.derivadaBox.Name = "derivadaBox";
             this.derivadaBox.ReadOnly = true;
             this.derivadaBox.ShortcutsEnabled = false;
-            this.derivadaBox.Size = new System.Drawing.Size(176, 30);
-            this.derivadaBox.TabIndex = 29;
-            this.derivadaBox.Text = "0";
+            this.derivadaBox.Size = new System.Drawing.Size(171, 30);
+            this.derivadaBox.TabIndex = 30;
             this.derivadaBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.derivadaBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box2_KeyPress);
             // 
             // label5
             // 
@@ -362,12 +363,12 @@
         private Button button3;
         private GroupBox groupBox3;
         private Label label5;
-        private TextBox derivadaBox;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private DataGridViewTextBoxColumn fxi;
         private DataGridViewTextBoxColumn dfxi;
         private DataGridViewTextBoxColumn xii;
+        private TextBox derivadaBox;
     }
 }
