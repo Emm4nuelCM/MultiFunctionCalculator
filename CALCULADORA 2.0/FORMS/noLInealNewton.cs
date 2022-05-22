@@ -11,6 +11,7 @@ using AngouriMath;
 using AngouriMath.Extensions;
 
 
+
 namespace CALCULADORA_2._0
 {
     public partial class noLInealNewton : Form
@@ -20,10 +21,6 @@ namespace CALCULADORA_2._0
         private double xi;
         private double factParo;
         // Campos
-        private TextBox currentTxtBox;
-        public bool txtEmpty; // Variable utilizada para saber si hay algún TextBox vacio.
-        public bool txtContains; // Variable utilizada para saber si hay algún TextBox únicamente con - o .
-       // private string currentForm; // Variable utilizada para guardar el Name del formulario padre
         public bool error; // Variable utilizada para detectar un error
         #endregion
 
@@ -57,14 +54,7 @@ namespace CALCULADORA_2._0
                     }
                     else
                     {
-                        if (String.IsNullOrEmpty(derivadaBox.Text))
-                        {
-                        validateUserEntry();
-                        }
-                        else
-                        {
-                            calcular();
-                        }
+                        calcular();
                     }
                 }
             }
@@ -74,41 +64,29 @@ namespace CALCULADORA_2._0
         #region Calcular
         private void calcular()
         {
-            //dxi = Convert.ToDouble(derivadaBox.Text);
             xi = Convert.ToDouble(desdeBox.Text);
             int imax, iter;
-            double ea, fxi,xii, xr, dfxi, xrold;
+            double ea, xr, xrold;
             imax = 30;
             dgvResults.Rows.Clear();
             iter = 0;
             xr = 0;
-            fxi = function(xi);
-            dfxi = function2(xi);
-            //double evalDouble = 0;
-            //Entity derivada = funcion.Differentiate("x");
-            //evalDouble = (double)derivada.EvalNumerical();
 
-
-            xii = xi;
-            
             do
             {
                 iter++;
 
                 xrold = xr;
-                xr = xii-(fxi/dfxi);
-                xii= xr;
-                fxi = function(xr);
-                dfxi = function2(xr);
+                xr = xi - (function(xi) / derivate(xi));
+                xi = xr;
                 ea = Math.Abs((xr - xrold) / xr) * 100;
 
-                
-
                 int n1 = dgvResults.Rows.Add();
-
                 dgvResults.Rows[n1].Cells[0].Value = iter;
                 dgvResults.Rows[n1].Cells[1].Value = xr;
                 dgvResults.Rows[n1].Cells[2].Value = ea + " %";
+                dgvResults.Rows[n1].Cells[3].Value = function(xi);
+                dgvResults.Rows[n1].Cells[4].Value = derivate(xi);
 
             } while (ea > factParo && iter <= imax);
         }
@@ -128,6 +106,7 @@ namespace CALCULADORA_2._0
             desdeBox.Text = "";
             paroBox.Text = "";
             derivadaBox.Text = "";
+            dgvResults.Rows.Clear();
         }
         #endregion
 
@@ -165,7 +144,7 @@ namespace CALCULADORA_2._0
         private void Box_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '.'))
+                (e.KeyChar != '.') && (e.KeyChar != '-'))
             {
                 e.Handled = true;
             }
@@ -175,152 +154,7 @@ namespace CALCULADORA_2._0
         #region FUNCION
         private double function(double x)
         {
-                string expression = FXBox.Text;
-                double evalDouble = 0;
-
-                error = false;
-
-                try
-                {
-                    // Puede ser lento a la hora de ejecutar .Replace
-                    if (expression.Contains("ℯ"))
-                    {
-                        expression = expression.Replace("ℯ", "e");
-                    }
-
-                    if (expression.Contains("√"))
-                    {
-                        expression = expression.Replace("√", "sqrt");
-                    }
-
-                    if (expression.Contains("π"))
-                    {
-                        expression = expression.Replace("π", "pi");
-                    }
-
-                    if (expression.Contains("sin⁻¹"))
-                    {
-                        expression = expression.Replace("sin⁻¹", "arcsin");
-                    }
-
-                    if (expression.Contains("cos⁻¹"))
-                    {
-                        expression = expression.Replace("cos⁻¹", "arccos");
-                    }
-
-                    if (expression.Contains("tan⁻¹"))
-                    {
-                        expression = expression.Replace("tan⁻¹", "arctan");
-                    }
-
-                    if (expression.Contains("x"))
-                    {
-                        expression = expression.Replace("x", x.ToString());
-                    }
-
-                    var expr = MathS.FromString(expression);
-
-                    expr.Simplify(); // Simplificar expresiones complicadas
-
-                    evalDouble = (double)expr.EvalNumerical();
-                }
-                catch (Exception err)
-                {
-                    error = true;
-
-                    if (err.Message.Contains("no viable alternative at input"))
-                    {
-                        MessageBox.Show(
-                        "Ocurrió un error inesperado, por favor escriba la función correctamente.\n\n" +
-                        "Si necesitas ayuda, por favor da click en el botón AYUDA para obtener más información.\n\n" +
-                        "Código: ERR100",
-                        "Error",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error,
-                        MessageBoxDefaultButton.Button1,
-                        0, "https://www.google.com.mx/?hl=es-419"
-                        );
-                    }
-
-                    if (err.Message.Contains("mismatched input"))
-                    {
-                        MessageBox.Show(
-                        "Ocurrió un error inesperado, por favor no escriba signos o símbolos repetidos.\n\n" +
-                        "Si necesitas ayuda, por favor da click en el botón AYUDA para obtener más información.\n\n" +
-                        "Código: ERR101",
-                        "Error",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error,
-                        MessageBoxDefaultButton.Button1,
-                        0, "https://www.google.com.mx/?hl=es-419"
-                        );
-                    }
-
-                    if (err.Message.Contains("extraneous input"))
-                    {
-                        MessageBox.Show(
-                        "Ocurrió un error inesperado, por favor escriba la función correctamente.\n\n" +
-                        "Si necesitas ayuda, por favor da click en el botón AYUDA para obtener más información.\n\n" +
-                        "Código: ERR102",
-                        "Error",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error,
-                        MessageBoxDefaultButton.Button1,
-                        0, "https://www.google.com.mx/?hl=es-419"
-                        );
-                    }
-
-                    if (err.Message.Contains("Cannot cast from AngouriMath.Entity+Number+Complex to System.Double"))
-                    {
-                        MessageBox.Show(
-                        "Ocurrió un error inesperado, la función es muy compleja para su solución.\n\n" +
-                        "Si necesitas ayuda, por favor da click en el botón AYUDA para obtener más información.\n\n" +
-                        "Código: ERR103",
-                        "Error",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error,
-                        MessageBoxDefaultButton.Button1,
-                        0, "https://www.google.com.mx/?hl=es-419"
-                        );
-                    }
-
-                    if (err.Message.Contains("Result cannot be represented as a simple number!"))
-                    {
-                        MessageBox.Show(
-                        "Ocurrió un error inesperado, por favor escriba la función correctamente.\n\n" +
-                        "Si necesitas ayuda, por favor da click en el botón AYUDA para obtener más información.\n\n" +
-                        "Código: ERR104",
-                        "Error",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error,
-                        MessageBoxDefaultButton.Button1,
-                        0, "https://www.google.com.mx/?hl=es-419"
-                        );
-                    }
-
-                    if (err.Message.Contains("token recognition error at"))
-                    {
-                        MessageBox.Show(
-                        "Ocurrió un error inesperado, por favor escriba la función correctamente.\n\n" +
-                        "Si necesitas ayuda, por favor da click en el botón AYUDA para obtener más información.\n\n" +
-                        "Código: ERR105",
-                        "Error",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error,
-                        MessageBoxDefaultButton.Button1,
-                        0, "https://www.google.com.mx/?hl=es-419"
-                        );
-                    }
-                }
-                return evalDouble;
-        }
-
-        #endregion
-
-        #region FUNCION2
-        private double function2(double x)
-        {
-            string expression = derivadaBox.Text;
+            string expression = FXBox.Text;
             double evalDouble = 0;
 
             error = false;
@@ -462,6 +296,54 @@ namespace CALCULADORA_2._0
 
         #endregion
 
+        #region Derivada
+        private double derivate(double x)
+        {
+            MSScriptControl.ScriptControl sc = new MSScriptControl.ScriptControl();
+            sc.Language = "VBScript";
 
+            string expression = "", eulerReplace = "";
+            if ((derivadaBox.Text.Contains("e")) && (derivadaBox.Text.Contains("x")))
+            {
+                eulerReplace = derivadaBox.Text.Replace("e", "2.7182818284");
+                expression = eulerReplace.Replace("x", x.ToString());
+            }
+            else
+            {
+                expression = derivadaBox.Text.Replace("x", x.ToString());
+            }
+            double result = sc.Eval(expression);
+            return result;
+        }
+
+        //ACTUALIZACION DE DERIVADA //ACTUALIZACION DE DERIVADA //ACTUALIZACION DE DERIVADA
+        private void FXBox_MouseLeave(object sender, EventArgs e)
+        {
+            derivadaBox.Text = "0";
+            //Exception User-Unhandled
+            error = false;
+            try
+            {
+                derivadaBox.Text = FXBox.Text.Differentiate("x").Simplify().ToString();
+            }
+            catch (Exception err)
+            {
+                error = true;
+                if (err.Message.Contains("user unhandled"))
+                {
+                    MessageBox.Show(
+                    "Ocurrió un error inesperado, por favor escriba la función correctamente.\n\n" +
+                    "Si necesitas ayuda, por favor da click en el botón AYUDA para obtener más información.\n\n" +
+                    "Código: ERR100",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1,
+                    0, "https://www.google.com.mx/?hl=es-419"
+                    );
+                }
+            }
+        }
+        #endregion
     }
 }

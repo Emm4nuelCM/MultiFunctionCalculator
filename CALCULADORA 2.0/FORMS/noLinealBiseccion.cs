@@ -132,6 +132,7 @@ namespace CALCULADORA_2._0
             desdeBox.Text = "";
             hastaBox.Text = "";
             paroBox.Text = "";
+            dgvResults.Rows.Clear();
         }
         #endregion
 

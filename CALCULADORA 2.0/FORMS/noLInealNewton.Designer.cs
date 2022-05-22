@@ -30,6 +30,12 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgvResults = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fxi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dfxi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.xii = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.desdeBox = new System.Windows.Forms.TextBox();
@@ -44,9 +50,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResults)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -76,13 +79,53 @@
             this.dgvResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn4});
-            this.dgvResults.Location = new System.Drawing.Point(190, 111);
+            this.dataGridViewTextBoxColumn4,
+            this.fxi,
+            this.dfxi,
+            this.xii});
+            this.dgvResults.Location = new System.Drawing.Point(21, 104);
             this.dgvResults.Name = "dgvResults";
             this.dgvResults.ReadOnly = true;
             this.dgvResults.RowTemplate.Height = 25;
-            this.dgvResults.Size = new System.Drawing.Size(313, 205);
+            this.dgvResults.Size = new System.Drawing.Size(615, 205);
             this.dgvResults.TabIndex = 42;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "ITERACION";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Xr";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Ɛa";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // fxi
+            // 
+            this.fxi.HeaderText = "fxi";
+            this.fxi.Name = "fxi";
+            this.fxi.ReadOnly = true;
+            // 
+            // dfxi
+            // 
+            this.dfxi.HeaderText = "dfxi";
+            this.dfxi.Name = "dfxi";
+            this.dfxi.ReadOnly = true;
+            // 
+            // xii
+            // 
+            this.xii.HeaderText = "Xi";
+            this.xii.Name = "xii";
+            this.xii.ReadOnly = true;
             // 
             // button1
             // 
@@ -164,6 +207,7 @@
             this.FXBox.Text = "x^3-x+1";
             this.FXBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.FXBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box2_KeyPress);
+            this.FXBox.MouseLeave += new System.EventHandler(this.FXBox_MouseLeave);
             // 
             // label4
             // 
@@ -216,10 +260,11 @@
             this.derivadaBox.Location = new System.Drawing.Point(291, 92);
             this.derivadaBox.Multiline = true;
             this.derivadaBox.Name = "derivadaBox";
+            this.derivadaBox.ReadOnly = true;
             this.derivadaBox.ShortcutsEnabled = false;
             this.derivadaBox.Size = new System.Drawing.Size(176, 30);
             this.derivadaBox.TabIndex = 29;
-            this.derivadaBox.Text = "3*x^2-1";
+            this.derivadaBox.Text = "0";
             this.derivadaBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.derivadaBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Box2_KeyPress);
             // 
@@ -278,25 +323,6 @@
             this.groupBox3.TabIndex = 41;
             this.groupBox3.TabStop = false;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "ITERACION";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 70;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Xr";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Ɛa";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
             // noLInealNewton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -340,5 +366,8 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn fxi;
+        private DataGridViewTextBoxColumn dfxi;
+        private DataGridViewTextBoxColumn xii;
     }
 }
