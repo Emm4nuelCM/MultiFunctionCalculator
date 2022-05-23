@@ -20,7 +20,6 @@ namespace CALCULADORA_2._0
         private string funcion;
         private double xi;
         private double factParo;
-        // Campos
         public bool error; // Variable utilizada para detectar un error
         #endregion
 
@@ -355,7 +354,7 @@ namespace CALCULADORA_2._0
                     MessageBox.Show(
                     "Ocurrió un error inesperado, por favor escriba la función correctamente.\n\n" +
                     "Si necesitas ayuda, por favor da click en el botón AYUDA para obtener más información.\n\n" +
-                    "Código: ERR100",
+                    "Código: ERR[num]",
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error,
@@ -369,7 +368,7 @@ namespace CALCULADORA_2._0
                     MessageBox.Show(
                     "Ocurrió un error inesperado, por favor no escriba signos o símbolos repetidos.\n\n" +
                     "Si necesitas ayuda, por favor da click en el botón AYUDA para obtener más información.\n\n" +
-                    "Código: ERR101",
+                    "Código: ERR[num]",
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error,
@@ -383,7 +382,7 @@ namespace CALCULADORA_2._0
                     MessageBox.Show(
                     "Ocurrió un error inesperado, por favor escriba la función correctamente.\n\n" +
                     "Si necesitas ayuda, por favor da click en el botón AYUDA para obtener más información.\n\n" +
-                    "Código: ERR102",
+                    "Código: ERR[num]",
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error,
@@ -397,7 +396,7 @@ namespace CALCULADORA_2._0
                     MessageBox.Show(
                     "Ocurrió un error inesperado, la función es muy compleja para su solución.\n\n" +
                     "Si necesitas ayuda, por favor da click en el botón AYUDA para obtener más información.\n\n" +
-                    "Código: ERR103",
+                    "Código: ERR[num]",
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error,
@@ -411,7 +410,7 @@ namespace CALCULADORA_2._0
                     MessageBox.Show(
                     "Ocurrió un error inesperado, por favor escriba la función correctamente.\n\n" +
                     "Si necesitas ayuda, por favor da click en el botón AYUDA para obtener más información.\n\n" +
-                    "Código: ERR104",
+                    "Código: ERR[num]",
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error,
@@ -425,7 +424,7 @@ namespace CALCULADORA_2._0
                     MessageBox.Show(
                     "Ocurrió un error inesperado, por favor escriba la función correctamente.\n\n" +
                     "Si necesitas ayuda, por favor da click en el botón AYUDA para obtener más información.\n\n" +
-                    "Código: ERR105",
+                    "Código: ERR[num]",
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error,

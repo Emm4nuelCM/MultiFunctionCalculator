@@ -46,8 +46,8 @@
             this.dgvResults = new System.Windows.Forms.DataGridView();
             this.iter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.xr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.paro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valoresBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -267,8 +267,8 @@
             this.dgvResults.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iter,
             this.xr,
-            this.paro,
-            this.FX});
+            this.FX,
+            this.paro});
             this.dgvResults.Location = new System.Drawing.Point(142, 97);
             this.dgvResults.Name = "dgvResults";
             this.dgvResults.ReadOnly = true;
@@ -289,17 +289,17 @@
             this.xr.Name = "xr";
             this.xr.ReadOnly = true;
             // 
-            // paro
-            // 
-            this.paro.HeaderText = "Ɛa";
-            this.paro.Name = "paro";
-            this.paro.ReadOnly = true;
-            // 
             // FX
             // 
             this.FX.HeaderText = "F(Xr)";
             this.FX.Name = "FX";
             this.FX.ReadOnly = true;
+            // 
+            // paro
+            // 
+            this.paro.HeaderText = "Ɛa";
+            this.paro.Name = "paro";
+            this.paro.ReadOnly = true;
             // 
             // noLinealBiseccion
             // 
@@ -343,7 +343,7 @@
         private DataGridView dgvResults;
         private DataGridViewTextBoxColumn iter;
         private DataGridViewTextBoxColumn xr;
-        private DataGridViewTextBoxColumn paro;
         private DataGridViewTextBoxColumn FX;
+        private DataGridViewTextBoxColumn paro;
     }
 }
