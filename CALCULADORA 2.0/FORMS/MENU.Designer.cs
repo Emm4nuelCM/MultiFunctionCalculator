@@ -32,8 +32,8 @@
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelSubmenu3 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
             this.master3 = new System.Windows.Forms.Button();
             this.panelSubmenu2 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
@@ -77,19 +77,19 @@
             this.panelSideMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSideMenu.Location = new System.Drawing.Point(0, 0);
             this.panelSideMenu.Name = "panelSideMenu";
-            this.panelSideMenu.Size = new System.Drawing.Size(133, 593);
+            this.panelSideMenu.Size = new System.Drawing.Size(133, 632);
             this.panelSideMenu.TabIndex = 0;
             // 
             // panelSubmenu3
             // 
             this.panelSubmenu3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.panelSubmenu3.Controls.Add(this.button10);
-            this.panelSubmenu3.Controls.Add(this.button11);
             this.panelSubmenu3.Controls.Add(this.button12);
+            this.panelSubmenu3.Controls.Add(this.button11);
             this.panelSubmenu3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubmenu3.Location = new System.Drawing.Point(0, 677);
             this.panelSubmenu3.Name = "panelSubmenu3";
-            this.panelSubmenu3.Size = new System.Drawing.Size(116, 123);
+            this.panelSubmenu3.Size = new System.Drawing.Size(116, 124);
             this.panelSubmenu3.TabIndex = 6;
             // 
             // button10
@@ -101,26 +101,12 @@
             this.button10.Location = new System.Drawing.Point(0, 80);
             this.button10.Name = "button10";
             this.button10.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button10.Size = new System.Drawing.Size(116, 37);
-            this.button10.TabIndex = 14;
-            this.button10.Text = "button10";
+            this.button10.Size = new System.Drawing.Size(116, 39);
+            this.button10.TabIndex = 16;
+            this.button10.Text = "Psimpsom 1/3";
             this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.ForeColor = System.Drawing.Color.LightGray;
-            this.button11.Location = new System.Drawing.Point(0, 40);
-            this.button11.Name = "button11";
-            this.button11.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button11.Size = new System.Drawing.Size(116, 40);
-            this.button11.TabIndex = 13;
-            this.button11.Text = "button11";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button12
             // 
@@ -128,14 +114,31 @@
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.ForeColor = System.Drawing.Color.LightGray;
-            this.button12.Location = new System.Drawing.Point(0, 0);
+            this.button12.Location = new System.Drawing.Point(0, 40);
             this.button12.Name = "button12";
             this.button12.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button12.Size = new System.Drawing.Size(116, 40);
-            this.button12.TabIndex = 12;
+            this.button12.TabIndex = 15;
             this.button12.Text = "Regla Trapezoidal";
             this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click_1);
+            // 
+            // button11
+            // 
+            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.ForeColor = System.Drawing.Color.LightGray;
+            this.button11.Location = new System.Drawing.Point(0, 0);
+            this.button11.Name = "button11";
+            this.button11.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button11.Size = new System.Drawing.Size(116, 40);
+            this.button11.TabIndex = 13;
+            this.button11.Text = "Integral definida";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // master3
             // 
@@ -385,7 +388,7 @@
             this.panelOptionMaster.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panelOptionMaster.Location = new System.Drawing.Point(133, 0);
             this.panelOptionMaster.Name = "panelOptionMaster";
-            this.panelOptionMaster.Size = new System.Drawing.Size(717, 593);
+            this.panelOptionMaster.Size = new System.Drawing.Size(717, 632);
             this.panelOptionMaster.TabIndex = 1;
             // 
             // textBox1
@@ -416,7 +419,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(850, 593);
+            this.ClientSize = new System.Drawing.Size(850, 632);
             this.Controls.Add(this.panelOptionMaster);
             this.Controls.Add(this.panelSideMenu);
             this.Name = "MENU";
@@ -446,9 +449,7 @@
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private TextBox textBox1;
-        private Button button10;
         private Button button11;
-        private Button button12;
         private Button master3;
         private Button button9;
         private Button button5;
@@ -460,5 +461,7 @@
         private Button button7;
         private Button button8;
         private Button master1;
+        private Button button10;
+        private Button button12;
     }
 }

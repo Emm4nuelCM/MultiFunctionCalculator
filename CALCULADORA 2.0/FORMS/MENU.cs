@@ -1,3 +1,5 @@
+using CALCULADORA_2._0.FORMS;
+
 namespace CALCULADORA_2._0
 {
     public partial class MENU : Form
@@ -121,18 +123,21 @@ namespace CALCULADORA_2._0
             showSubmenu(panelSubmenu3);
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void button12_Click_1(object sender, EventArgs e)
         {
+            openChildForm(new integralReglaTrapezio());
             hideSubmenu();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
+            openChildForm(new integralDefinida());
             hideSubmenu();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
+            openChildForm(new integralPsimpsom());
             hideSubmenu();
         }
         #endregion
@@ -154,8 +159,9 @@ namespace CALCULADORA_2._0
             optionMaster.Show();
         }
 
+
+
         #endregion
 
-       
     }
 }
